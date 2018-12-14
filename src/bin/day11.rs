@@ -20,11 +20,7 @@ fn get_prefix(v: &Vec<Vec<i32>>) -> Vec<Vec<i32>> {
     let mut prefix: Vec<Vec<i32>> = Vec::new();
 
     for _ in 0..v.len() {
-        let mut row = Vec::new();
-        for _ in 0..v.len() {
-            row.push(0);
-        }
-        prefix.push(row);
+        prefix.push(vec![0; v.len()]);
     }
 
     for i in 1..v.len() {
